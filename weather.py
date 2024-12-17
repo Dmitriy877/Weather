@@ -9,7 +9,7 @@ def main():
 
 	for place in places:
 
-		weather_url = 'https://wttr.in/{0}?MnTqu&lang=ru'.format(place)
+		weather_url = 'https://wttr.in/{0}'.format(place)
 		response = requests.get(weather_url, params=payload)
 		response.raise_for_status()
 		print(response.text)
